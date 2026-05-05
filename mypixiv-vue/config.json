@@ -1,0 +1,26 @@
+{
+  "environments": {
+    "development": {
+      "useMock": false,
+      "apiBaseUrl": "http://localhost:8080",
+      "frontendPort": 8081,
+      "description": "开发环境 - 连接本地后端服务"
+    },
+    "mock": {
+      "useMock": true,
+      "apiBaseUrl": "",
+      "frontendPort": 8081,
+      "description": "Mock模式 - 使用Mock.js拦截API请求"
+    },
+    "production": {
+      "apiBaseUrl": "/api",
+      "description": "生产环境 - 使用相对路径"
+    }
+  },
+  "defaultEnvironment": "development",
+  "notes": {
+    "useMock": "是否启用Mock模式，true时所有API请求被Mock.js拦截",
+    "apiBaseUrl": "后端API地址，开发环境默认 http://localhost:8080",
+    "frontendPort": "前端开发服务器端口，默认 8081"
+  }
+}
